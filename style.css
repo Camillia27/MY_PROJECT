@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@600&family=Dancing+Script&display=swap');
+
+body {
+    font-family: 'Advent Pro', sans-serif; /*les fonts*/
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    margin: 0; /*la taille sur les quatres coté de l'element"
+    padding: 0; /*espace entre le contenue et la bordure*/
+}
+
+li {
+    list-style-type: none; /*aucun type par defaut*/
+}
+
+h2 {
+    text-transform: uppercase; /*majuscule*/
+    text-align: center; /*aligne le texte*/
+    padding-top: 30px; /*espace haut*/
+    font-size: 2em; /*taille*/
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/***************************NAVIGATION BAR************************************ */
+
+nav{
+    overflow: hidden; /*tout ce qui depassse doit etre caché*/
+    background-color: blanchedalmond;
+    position: fixed; /*elle bougera pas la barre*/
+    width: 100%; /*largeur**/
+    opacity: 0.9; /*on vois tres legerement derriere*/
+}
+
+header li {
+    float: right; /*floater a droite*/
+    font-size: 1.2em;
+}
+
+header li a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 18px 16px;/*1er en haut en bas / 2eme a gauche a droite*/
+}
+
+#logo{ /*pour joindre l'id en met un hastag*/ /*logo = hammou camillia*/
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    float: left;
+}
+
+/*************************IMAGE_PRINCIPALE**************************/
+
+#imagePrincipale {
+    padding-top: 60px;
+    background: url(media/image-principale.JPG) no-repeat fixed 50% 50%; /*l'image ne ce repetera pas et elle sera centré et grace a fixed elle bouge plus y'aura un effet*/
+    background-size: cover; /*sa couvre quelle que soit le pc important sa couvre le site*/
+    height: 799px;/*taille pour l'agrandir*/
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    color:antiquewhite;/*couleur text*/
+    font-size: 6em;
+    margin-top: 100px; /*descend*/
+    text-shadow: 1px 3px 2px black; /*une ombre noir derriere*/
+}
+
+#premierTrait {
+    height: 1px;
+    width: 25%;
+    margin: -3px auto; /*centre*/
+    background-color: antiquewhite;
+    box-shadow: 1px 3px 2px black; /*une ombre noir derriere*/
+}
+
+h3 {/*sous titre*/
+    text-align: center;
+    color: antiquewhite;
+    font-size: 3em;
+    text-shadow: 1px 3px 2px black; /*une ombre noir derriere*/
+}
+
+/*************************PRESENTATION***********************************/
+
+#presentation {
+    background-color: antiquewhite;
+    padding: 10px 0px 100px 0;/*1 er en haute 2eme a droite 3eme en bas 4 eme a gauche*/
+}
+
+#TextIntro {
+    padding: 0px, 20%;
+}
+
+#prestation {
+    display: flex; /*image alignes*/
+    flex-wrap: wrap;/*enroule*/
+    justify-content: space-between; /*sa les espaces*/
+    padding: 30px 10%; /*une image part*/
+}
+
+.imagesPrestation h4 {/*pour appeler une classe*/
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    font-size: 1.8em;
+    margin: 15px; /*1 seul c'est on donne on donne la meme valeur de partout*/
+    font-weight: 300;/*donner une grosseur differente*/
+}
+
+.imagesPrestation img{
+    border-radius: 10px; /*de partout arrondis les bords*/
+    box-shadow: 5px 5px 3px 1px rgba(0, 0, 0, 0.7); /*les bordeurs en ombres*/
+}
+
+.imagesPrestation img:hover { /* on survole un text grace a souris*/
+    opacity: 0.5;
+    transform: scale(1.05);/*la sa grossis*/
+    transition: 0.6s ease-in-out; /*le temps , sa demarre doucement et sa finit doucement*/
+}
+
+/*********************TOURISME**********************/
+
+#tourisme {
+    height: 1400px;
+    background-color: #f1f2f6;
+    padding: 1px 2%;
+}
+
+#tourime h2 {
+    padding-top: 60px;
+}
+
+#ocean {
+    background: url(media/ocean.jpg);
+}
+
+#chateau {
+    background: url(media/chateau.JPG);
+}
+
+#phare {
+    background: url(media/phare.JPG);
+}
+
+#vignoble {
+    background: url(media/vignes.jpg);
+}
+
+#tourisme li {
+    margin: 65px 100px 0 100px;
+    height: 226px;
+    width: 55%; /*pourcentage preferable pour les width*/
+    max-width: 550px;
+    float: left;
+    box-shadow: 6px 6px 28px -1px rgba(0, 0, 0, 0.75);
+}
+
+#tourisme p {
+    height: 45px; /*hauteur*/
+    width: 235px; /*largeur*/
+    background-color: palegreen;
+    float: right;
+    margin: 50px -180px 0 0;
+    font-size: 1.5em;
+    text-align: center;
+    padding-top: 15px;
+    box-shadow: 4px 4px 0 1px rgba(90, 161, 43, 1);
+}
+
+#tourisme #chateau, #tourisme #vignoble { /*ils vont a droite dans l'image*/
+    float: right;
+}
+
+#chateau p, #vignoble p{
+    float: left;
+    background-color: cyan;
+    margin-left: -180px;
+    box-shadow: -4px 4px 0 1px rgba(15, 154, 156, 1);
+}
+
+/****************************FOOTER***********************/
+
+footer{
+    background-color: #524A3A;
+    color: antiquewhite;
+    padding: 20px 0 10px 0;
+    text-align: center;
+}
+
+form {
+    margin: 0 auto; /*sa centre la section*/
+    max-width: 900px;/* si la page est immense le formulaire ne va pas s'aggrandir a l'infinie*/
+}
+
+input, textarea, button {
+    border: none;
+    width: 55%;
+    padding: 15px 10px;
+    margin: 1px 0; /*tout les boutons entre eux vont ce cree une marge*/
+    font-size: 1.2em;
+    font-family: 'Advice Pro', sans-serif;
+    border-radius: 8px;
+}
+
+textarea {
+    height: 120px;
+}
+
+button {
+    font-size: 1.5em;
+    background-color: antiquewhite;
+}
+
+button:hover {
+    background-color: brown;
+    color: antiquewhite; /*color=que pour le texte*/
+    cursor: pointer; /*quand on va survolé le bouton il'ya le doight*/
+    transition: 0.3s ease-in-out;
+}
+
+#deuxiemeTrait {
+    height: 1px;
+    width: 75%;
+    background-color: antiquewhite;
+    margin: 60px auto;
+}
+
+#CopyrightEtIcon {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 0 10%;
+}
+
+#Copyright {
+    width: 50%;
+    text-align: left;
+    color: antiquewhite;
+}
+
+#icons {
+    width: 50%;
+    text-align: right;
+}
+
+#icons a {
+    display: inline-block;/*en ligne*/
+    margin: 0 15px;
+    font-size: 1.3em;
+    color: antiquewhite;
+}
